@@ -20,7 +20,6 @@ patents and citations.
 - Desired time span: 2000 to 2015
 - Command: `python term_frequency.py 'bitcoin' 2000 2015` 
 - Output: `out.csv`, with the following contents:
-
 | year | results |
 |------|---------|
 | 2011 |    6320 |
