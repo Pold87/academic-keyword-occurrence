@@ -8,7 +8,7 @@ in research and analyzing the relevance of a topic over time.
 
 ## Usage
 
-`python term_frequency.py '<keyword>' <start date> <end date>` 
+`python extract_occurrences.py '<keyword>' <start date> <end date>` 
 
 This command lists the number of publications for every year using
 this keyword. The script just searches for articles and excludes
