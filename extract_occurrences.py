@@ -25,7 +25,7 @@ def get_num_results(search_term, start_date, end_date):
     div_results = soup.find("div", {"id": "gs_ab_md"}) # find line 'About x results (y sec)
 
     if div_results != None:
-        res = re.findall(r'\s(\d+),?(\d+)?\s', div_results.text) # extract number of search results 
+        res = re.findall(r'(\d+),?(\d+)?\s', div_results.text) # extract number of search results 
         num_results = ''.join(res[0]) # convert string to number
         success = True
     else:
@@ -41,7 +41,7 @@ def get_range(search_term, start_date, end_date):
     fp.write("year,results\n")
     print("year,results")
 
-    for date in range(start_date, end_date):
+    for date in range(start_date, end_date + 1):
 
         num_results, success = get_num_results(search_term, date, date)
         if not(success):
