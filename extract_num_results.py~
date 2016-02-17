@@ -1,0 +1,5 @@
+from bs4 import BeautifulSoup
+import urllib
+r = urllib.urlopen('https://scholar.google.nl/scholar?hl=en&as_sdt=1,5&q=self-disclosure').read()
+soup = BeautifulSoup(r)
+print type(soup)
