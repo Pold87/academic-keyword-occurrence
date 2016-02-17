@@ -17,7 +17,7 @@ patents and citations.
 ## Example
 
 - Search term: 'bitcoin'
-- Desired time span: 2011 to 2015
+- Desired time span: 2000 to 2015
 - Command: `python term_frequency.py 'bitcoin' 2000 2015` 
 - Output: `out.csv`, with the following contents:
 
