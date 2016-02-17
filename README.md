@@ -22,14 +22,15 @@ patents and citations.
 - Output: `out.csv`, with the following contents:
 
 | year | results |
-|------|---------|
-| 2011 |    6320 |
-| 2012 |    7250 |
-| 2013 |    8170 |
-| 2014 |    8260 |
-| 2015 |    8150 |
+|------|---------
+| ...  |    ...  |	|
+| 2011 |    141  |
+| 2012 |    292  |
+| 2013 |    889  |
+| 2014 |    2370 |
+| 2015 |    2580 |
 
 
-
+![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
  
 
