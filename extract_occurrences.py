@@ -14,7 +14,8 @@ def get_num_results(search_term, start_date, end_date):
 
     # Open website and read html
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
-    url = "https://scholar.google.nl/scholar?as_vis=1&q={0}&hl=en&as_sdt=1,5&as_ylo={1}&as_yhi={2}".format(search_term, start_date, end_date)
+    query_params = { 'q' : search_term, 'as_ylo' : start_date, 'as_yhi' : end_date}
+    url = "https://scholar.google.com/scholar?as_vis=1&hl=en&as_sdt=1,5&" + urllib.urlencode(query_params)
     opener = build_opener()
     request = Request(url=url, headers={'User-Agent': user_agent})
     handler = opener.open(request)
