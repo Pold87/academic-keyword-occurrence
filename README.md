@@ -4,7 +4,7 @@
 
 This script extracts the historic word occurrence of a search term in
 academic papers (from Google Scholar). It allows for spotting trends
-in research and analyzing the relevance of a topic over time.
+in research and analyzing the relevance of a topic over time. The master branch contains the Python 2.7 version. A Python 3 version can be found in the branch Python3.
 
 ## Usage
 
@@ -33,4 +33,6 @@ patents and citations.
 
 ![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
  
-
+## Credits
+Created by Volker Strobel - volker.strobel87@gmail.com
+Modifications for Python 3 version made by Patrick Hoffmann
