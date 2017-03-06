@@ -35,4 +35,5 @@ patents and citations.
  
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
+
 Modifications for Python 3 version made by Patrick Hoffmann
