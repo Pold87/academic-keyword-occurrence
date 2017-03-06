@@ -34,3 +34,7 @@ patents and citations.
 ![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
  
 
+## Credits
+Created by Volker Strobel - volker.strobel87@gmail.com
+  		  
+Modifications for Python 3 version made by Patrick Hofmann
