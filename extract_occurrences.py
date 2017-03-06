@@ -1,11 +1,9 @@
-# By: Volker Strobel
+# By: Volker Strobel, improved by Patrick Hofmann
 from bs4 import BeautifulSoup
-import urllib
-from urllib2 import Request, build_opener, HTTPCookieProcessor
-from cookielib import MozillaCookieJar
-import re
-import time
-import sys
+from urllib.request import Request, build_opener, HTTPCookieProcessor
+from urllib.parse import urlencode
+from http.cookiejar import MozillaCookieJar
+import re, time, sys, urllib
 
 def get_num_results(search_term, start_date, end_date):
     """
@@ -15,7 +13,7 @@ def get_num_results(search_term, start_date, end_date):
     # Open website and read html
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
     query_params = { 'q' : search_term, 'as_ylo' : start_date, 'as_yhi' : end_date}
-    url = "https://scholar.google.com/scholar?as_vis=1&hl=en&as_sdt=1,5&" + urllib.urlencode(query_params)
+    url = "https://scholar.google.com/scholar?as_vis=1&hl=en&as_sdt=1,5&" + urllib.parse.urlencode(query_params)
     opener = build_opener()
     request = Request(url=url, headers={'User-Agent': user_agent})
     handler = opener.open(request)
@@ -26,15 +24,19 @@ def get_num_results(search_term, start_date, end_date):
     div_results = soup.find("div", {"id": "gs_ab_md"}) # find line 'About x results (y sec)
 
     if div_results != None:
-        res = re.findall(r'(\d+),?(\d+)?\s', div_results.text) # extract number of search results 
-        num_results = ''.join(res[0]) # convert string to number
-        success = True
+        res = re.findall(r'(\d+),?(\d+)?\s', div_results.text) # extract number of search results
+        if res == []:
+            num_results = '0'
+            success = True
+        else:
+            num_results = ''.join(res[0]) # convert string to numbe
+            success = True
+
     else:
         success = False
         num_results = 0
 
     return num_results, success
-
 
 def get_range(search_term, start_date, end_date):
 
@@ -58,11 +60,11 @@ def get_range(search_term, start_date, end_date):
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
-        print "******"
-        print "Academic word relevance"
-        print "******"
-        print ""
-        print "Usage: python term_frequency.py '<search term>' <start date> <end date>"
+        print("******")
+        print("Academic word relevance")
+        print("******")
+        print("")
+        print("Usage: python extract_occurences.py '<search term>' <start date> <end date>")
         
     else:
         search_term = sys.argv[1]
