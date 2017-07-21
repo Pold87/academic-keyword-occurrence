@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # By: Volker Strobel
 from bs4 import BeautifulSoup
 import urllib
@@ -46,7 +47,7 @@ def get_range(search_term, start_date, end_date):
 
         num_results, success = get_num_results(search_term, date, date)
         if not(success):
-            print("It seems that you made to many requests to Google Scholar. Please wait a couple of hours and try again.")
+            print("It seems that you made too many requests to Google Scholar. Please wait a couple of hours and try again.")
             break
         year_results = "{0},{1}".format(date, num_results)
         print(year_results)
@@ -62,7 +63,7 @@ if __name__ == "__main__":
         print "Academic word relevance"
         print "******"
         print ""
-        print "Usage: python term_frequency.py '<search term>' <start date> <end date>"
+        print "Usage: python extract_occurrences.py '<search term>' <start date> <end date>"
         
     else:
         search_term = sys.argv[1]
