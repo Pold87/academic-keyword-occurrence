@@ -34,13 +34,12 @@ def get_num_results(search_term, start_date, end_date):
 
     if div_results != None:
         res = re.findall(r'(\d+),?(\d+)?,?(\d+)?\s', div_results.text) # extract number of search results
-        num_results = ''.join(res[0]) # convert string to number
-        success = True
-        res = re.findall(r'(\d+),?(\d+)?\s', div_results.text) # extract number of search results
         if not res:
             num_results = '0'
         else:
             num_results = ''.join(res[0]) # convert string to number
+
+        success = True
     else:
         success = False
         num_results = 0
