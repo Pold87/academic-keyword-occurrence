@@ -3,10 +3,16 @@
 from bs4 import BeautifulSoup
 import urllib
 from urllib2 import Request, build_opener, HTTPCookieProcessor
-from cookielib import MozillaCookieJar
+from cookielib import LWPCookieJar
 import re
 import time
 import sys
+
+cookies = LWPCookieJar('./cookies')
+try:
+    cookies.load()
+except IOError:
+    pass
 
 def get_num_results(search_term, start_date, end_date):
     """
@@ -17,7 +23,7 @@ def get_num_results(search_term, start_date, end_date):
     user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36'
     query_params = { 'q' : search_term, 'as_ylo' : start_date, 'as_yhi' : end_date}
     url = "https://scholar.google.com/scholar?as_vis=1&hl=en&as_sdt=1,5&" + urllib.urlencode(query_params)
-    opener = build_opener()
+    opener = build_opener(HTTPCookieProcessor(cookies))
     request = Request(url=url, headers={'User-Agent': user_agent})
     handler = opener.open(request)
     html = handler.read() 
@@ -30,6 +36,11 @@ def get_num_results(search_term, start_date, end_date):
         res = re.findall(r'(\d+),?(\d+)?,?(\d+)?\s', div_results.text) # extract number of search results
         num_results = ''.join(res[0]) # convert string to number
         success = True
+        res = re.findall(r'(\d+),?(\d+)?\s', div_results.text) # extract number of search results
+        if not res:
+            num_results = '0'
+        else:
+            num_results = ''.join(res[0]) # convert string to number
     else:
         success = False
         num_results = 0
@@ -64,9 +75,12 @@ if __name__ == "__main__":
         print "******"
         print ""
         print "Usage: python extract_occurrences.py '<search term>' <start date> <end date>"
-        
+
     else:
-        search_term = sys.argv[1]
-        start_date = int(sys.argv[2])
-        end_date = int(sys.argv[3])
-        html = get_range(search_term, start_date, end_date)
+        try:
+            search_term = sys.argv[1]
+            start_date = int(sys.argv[2])
+            end_date = int(sys.argv[3])
+            html = get_range(search_term, start_date, end_date)
+        finally:
+            cookies.save()
