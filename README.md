@@ -14,6 +14,8 @@ This command lists the number of publications for every year using
 this keyword. The script just searches for articles and excludes
 patents and citations.
 
+The script requires a couple of packages (e.g. Beautiful Soup 4), you can install them with pip. 
+
 ## Example
 
 - Search term: 'bitcoin'
