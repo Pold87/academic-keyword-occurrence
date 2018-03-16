@@ -36,6 +36,20 @@ The script requires a couple of packages (e.g. Beautiful Soup 4), you can instal
 ![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
  
 
+## Troubleshooting
+_OSX only_: Python 3.6 does not include any SSL certificates, therefore any `https`
+request will fail due to the impossibility to verify the URL.
+
+This will lead to the following error:
+
+```
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed
+```
+
+_Fix_: Execute `/Applications/Python\ 3.6/Install\ Certificates.command` to
+install the `certifi` package. (More details: https://stackoverflow.com/a/42334357)
+
+
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
   		  
