@@ -52,5 +52,9 @@ install the `certifi` package. (More details: https://stackoverflow.com/a/423343
 
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
-  		  
-Modifications for Python 3 version (see branch python3) made by Patrick Hofmann
+
+If you use this code in academic papers, please cite this repository via Zenodo (http://doi.org/10.5281/zenodo.1218409):
+
+Volker Strobel. (2018, April 14). Pold87/academic-keyword-occurrence: First release (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.1218409
+
+
