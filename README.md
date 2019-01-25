@@ -20,8 +20,9 @@ The script requires a couple of packages (e.g. Beautiful Soup 4), you can instal
 
 - Search term: 'bitcoin'
 - Desired time span: 2000 to 2015
-- Command: `python extract_occurrences.py 'bitcoin' 2000 2015` 
-- Output: `out.csv`, with the following contents:
+- (Optional) Output file: 'results/out.csv'
+- Command: `python extract_occurrences.py 'bitcoin' 2000 2015 'results/out.csv'`
+- Output: `results/out.csv` (or `out.csv` by default), with the following contents:
 
 | year | results |
 |------|---------

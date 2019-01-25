@@ -47,9 +47,12 @@ def get_num_results(search_term, start_date, end_date):
     return num_results, success
 
 
-def get_range(search_term, start_date, end_date):
+def get_range(search_term, start_date, end_date, output_file="out.csv"):
 
-    fp = open("out.csv", 'w')
+    try:
+        fp = open(output_file, 'w')
+    except IOError:
+        fp = open(output_file, 'w+')
     fp.write("year,results\n")
     print("year,results")
 
@@ -69,17 +72,19 @@ def get_range(search_term, start_date, end_date):
 if __name__ == "__main__":
 
     if len(sys.argv) < 3:
-        print "******"
-        print "Academic word relevance"
-        print "******"
-        print ""
-        print "Usage: python extract_occurrences.py '<search term>' <start date> <end date>"
+        print("******")
+        print("Academic word relevance")
+        print("******")
+        print("")
+        print("Usage: python extract_occurrences.py '<search term>' <start date> <end date> ['<output_file>']")
 
     else:
         try:
             search_term = sys.argv[1]
             start_date = int(sys.argv[2])
             end_date = int(sys.argv[3])
-            html = get_range(search_term, start_date, end_date)
+            if len(sys.argv) > 3:
+                output_file = sys.argv[4]
+            get_range(search_term, start_date, end_date, output_file)
         finally:
             cookies.save()
