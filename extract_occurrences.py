@@ -83,8 +83,10 @@ if __name__ == "__main__":
             search_term = sys.argv[1]
             start_date = int(sys.argv[2])
             end_date = int(sys.argv[3])
-            if len(sys.argv) > 3:
+            if len(sys.argv) > 4:
                 output_file = sys.argv[4]
-            get_range(search_term, start_date, end_date, output_file)
+                get_range(search_term, start_date, end_date, output_file)
+            else:
+                get_range(search_term, start_date, end_date)
         finally:
             cookies.save()
