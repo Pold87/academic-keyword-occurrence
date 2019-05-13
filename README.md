@@ -6,6 +6,8 @@ This script extracts the historic word occurrence of a search term in
 academic papers (from Google Scholar). It allows for spotting trends
 in research and analyzing the relevance of a topic over time.
 
+There is a Python 2 branch (master) and a Python 3 branch (python3).
+
 ## Usage
 
 `python extract_occurrences.py '<keyword>' <start date> <end date>` 
