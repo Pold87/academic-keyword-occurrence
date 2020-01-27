@@ -25,7 +25,7 @@ def get_num_results(search_term, start_date, end_date):
 
     if div_results != None:
 
-        res = re.findall(r'(\d+),?(\d+)?,?(\d+)?\s', div_results.text) # extract number of search results
+        res = re.findall(r'(\d+).?(\d+)?.?(\d+)?\s', div_results.text) # extract number of search results
         
         if res == []:
             num_results = '0'
