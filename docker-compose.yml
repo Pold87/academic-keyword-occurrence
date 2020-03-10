@@ -2,5 +2,6 @@ version: "3"
 services:
   academickeywordoccurrence:
       build: .
+      command: python ./extract_occurrences.py 'Bitcoin' 2005 2015 
       volumes:
         - ./:/data

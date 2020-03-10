@@ -4,5 +4,5 @@ RUN pip install bs4
 RUN pip install urllib5
 RUN pip install http3
 
+
 WORKDIR /data
-CMD ["python", "./extract_occurrences.py", "'Gamification'", "2010", "2020" ]
