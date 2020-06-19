@@ -34,7 +34,7 @@ The script requires a couple of packages (e.g. Beautiful Soup 4), you can instal
 | 2015 |    2580 |
 
 
-![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
+![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/trunk/bitcoin_chart.png "bitcoin chart")
  
 
 ## Troubleshooting
