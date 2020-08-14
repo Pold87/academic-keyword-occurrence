@@ -1,6 +1,6 @@
 # Historic word occurrence in academic papers
 
-## Summary 
+## Summary
 
 This script extracts the historic word occurrence of a search term in
 academic papers (from Google Scholar). It allows for spotting trends
@@ -10,17 +10,25 @@ There is a Python 3 branch (master) and a Python 2 branch (python2).
 
 ## Usage
 
-`python extract_occurrences.py '<keyword>' <start date> <end date>` 
+`python extract_occurrences.py '<keyword>' <start date> <end date>`
 
 This command lists the number of publications for every year using
 this keyword. The script just searches for articles and excludes
 patents and citations.
 
+
+### Alternate usage with Docker
+
+You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or it's dependencies installed.
+
+1. Update the `command` with your search term and time range in `docker-compose.yml`
+2. run `docker-compose up`
+
 ## Example
 
 - Search term: 'bitcoin'
 - Desired time span: 2000 to 2015
-- Command: `python extract_occurrences.py 'bitcoin' 2000 2015` 
+- Command: `python extract_occurrences.py 'bitcoin' 2000 2015`
 - Output: `out.csv`, with the following contents:
 
 | year | results |
@@ -34,7 +42,7 @@ patents and citations.
 
 
 ![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
- 
+
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
 
