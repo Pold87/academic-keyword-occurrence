@@ -17,9 +17,9 @@ this keyword. The script just searches for articles and excludes
 patents and citations.
 
 
-### Alternate usage with Docker
+### Alternative: Usage with Docker
 
-You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or it's dependencies installed.
+You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies installed.
 
 1. Update the `command` with your search term and time range in `docker-compose.yml`
 2. run `docker-compose up`
