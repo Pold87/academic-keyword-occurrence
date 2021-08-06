@@ -16,6 +16,12 @@ This command lists the number of publications for every year using
 this keyword. The script just searches for articles and excludes
 patents and citations.
 
+## Update: 
+Allows saving csv names as "keyword.csv". Also supports specific inputs
+like "Global Outlook Digital Humanities" (with quotation marks)
+EG: get_academic_occurence('/"Global Outlook Digital Humanities/"', 2010, 2012)
+
+----
 
 ### Alternative: Usage with Docker
 
