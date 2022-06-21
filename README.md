@@ -30,7 +30,8 @@ If no argument are given as input, the user can use the prompt to enter the need
 
 ## Usage with Docker-Compose
 
-You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies installed.
+You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies
+installed.
 
 1. Update the `command` with your search term and time range in `docker-compose.yml`
 2. run `docker-compose up`
@@ -45,6 +46,7 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
     - `fig.png` file
 
 ### Content example
+
 | year | results |
 |------|---------|
 | 2005 |    67  |
@@ -54,18 +56,21 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 | 2009 |    374 |
 | 2010 |    355 |
 
-
 ![bitcoin chart](./rsc/bitcoin_chart.png "bitcoin chart")
 
 ## Credits
+
 Created by Volker Strobel - volker.strobel87@gmail.com
 
 If you use this code in academic papers, please cite this repository via Zenodo (http://doi.org/10.5281/zenodo.1218409):
 
-Volker Strobel. (2018, April 14). Pold87/academic-keyword-occurrence: First release (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.1218409
+Volker Strobel. (2018, April 14). Pold87/academic-keyword-occurrence: First release (Version v1.0.0).
+Zenodo. http://doi.org/10.5281/zenodo.1218409
 
 ### Contributors
+
 Patrick Hofmann
+
 Cédric Gilon
 
 
