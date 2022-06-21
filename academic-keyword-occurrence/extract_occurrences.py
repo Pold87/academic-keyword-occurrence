@@ -50,7 +50,7 @@ def get_range(search_term, start_date, end_date):
 
         num_results, success = get_num_results(search_term, date, date)
         if not(success):
-            print("It seems that you made to many requests to Google Scholar. Please wait a couple of hours and try again.")
+            print("It seems that you made to many requests to Google Scholar. Please wait academic-keyword-occurrence couple of hours and try again.")
             break
         year_results = "{0},{1}".format(date, num_results)
         print(year_results)
