@@ -47,12 +47,12 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 ### Content example
 | year | results |
 |------|---------|
-| ...  |    ...  |
-| 2011 |    141  |
-| 2012 |    292  |
-| 2013 |    889  |
-| 2014 |    2370 |
-| 2015 |    2580 |
+| 2005 |    67  |
+| 2006 |    58  |
+| 2007 |    98  |
+| 2008 |    293 |
+| 2009 |    374 |
+| 2010 |    355 |
 
 
 ![bitcoin chart](./rsc/bitcoin_chart.png "bitcoin chart")
