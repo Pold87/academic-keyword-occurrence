@@ -55,7 +55,7 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 | 2015 |    2580 |
 
 
-![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
+![bitcoin chart](./rsc/bitcoin_chart.png "bitcoin chart")
 
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
