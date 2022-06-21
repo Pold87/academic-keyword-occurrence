@@ -1,11 +1,14 @@
 [tool.poetry]
 name = "academic-keyword-occurrence"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+version = "1.1"
+description = """
+This script extracts the historic word occurrence of a search term in academic papers (from Google Scholar).
+It allows for spotting trends in research and analyzing the relevance of a topic over time.
+"""
+authors = ["Volker Strobel <volker.strobel87@gmail.com> ; Cédric Gilon <cedric.gilon@ulb.be>"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 click = "^8.1.3"
 pandas = "^1.4.2"
 requests = "^2.28.0"
