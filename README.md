@@ -10,16 +10,28 @@ There is a Python 3 branch (master) and a Python 2 branch (python2).
 
 ## Usage
 
+### Command line arguments
+
 `python extract_occurrences.py '<keyword>' <start date> <end date>`
 
 This command lists the number of publications for every year using
 this keyword. The script just searches for articles and excludes
 patents and citations.
 
+### User input
 
-### Alternative: Usage with Docker
+If no argument are given as input, the user can use the prompt to enter the needed information.
 
-You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies installed.
+```
+> Search term: <keyword>
+> Start date: <start date>
+> End date: <end date>
+```
+
+## Usage with Docker-Compose
+
+You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies
+installed.
 
 1. Update the `command` with your search term and time range in `docker-compose.yml`
 2. run `docker-compose up`
@@ -28,24 +40,37 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 
 - Search term: 'bitcoin'
 - Desired time span: 2000 to 2015
-- Command: `python extract_occurrences.py 'bitcoin' 2000 2015`
-- Output: `out.csv`, with the following contents:
+- Command: `python extract_occurrences.py 'bitcoin' 2005 2010`
+- Output: A new folder is created in `results` folder with the following contents:
+    - `results.csv` file
+    - `fig.png` file
+
+### Content example
 
 | year | results |
-|------|---------
-| ...  |    ...  |	|
-| 2011 |    141  |
-| 2012 |    292  |
-| 2013 |    889  |
-| 2014 |    2370 |
-| 2015 |    2580 |
+|------|---------|
+| 2005 |    67  |
+| 2006 |    58  |
+| 2007 |    98  |
+| 2008 |    293 |
+| 2009 |    374 |
+| 2010 |    355 |
 
-
-![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
+![bitcoin chart](./rsc/bitcoin_chart.png "bitcoin chart")
 
 ## Credits
+
 Created by Volker Strobel - volker.strobel87@gmail.com
 
 If you use this code in academic papers, please cite this repository via Zenodo (http://doi.org/10.5281/zenodo.1218409):
 
-Volker Strobel. (2018, April 14). Pold87/academic-keyword-occurrence: First release (Version v1.0.0). Zenodo. http://doi.org/10.5281/zenodo.1218409
+Volker Strobel. (2018, April 14). Pold87/academic-keyword-occurrence: First release (Version v1.0.0).
+Zenodo. http://doi.org/10.5281/zenodo.1218409
+
+### Contributors
+
+Patrick Hofmann
+
+Cédric Gilon
+
+
