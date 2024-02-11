@@ -1,21 +1,21 @@
-# Historic word occurrence in academic papers
+# Occurrence of a list of keywords in google academic. Extraction of search results.
 
 ## Summary
 
-This script extracts the historic word occurrence of a search term in
-academic papers (from Google Scholar). It allows for spotting trends
-in research and analyzing the relevance of a topic over time.
+This script extracts the number of results from a list of search terms in academia (from Google Scholar). It helps to prioritise research niches and where there may be under-researched needs.
+
+It can be useful when focusing a scientific review to see where the most information is to be found.
 
 There is a Python 3 branch (master) and a Python 2 branch (python2).
 
 ## Usage
 
-`python extract_occurrences.py '<keyword>' <start date> <end date>`
+Add the list of keywords you want to search for and run the script. If you want to search for combinations of words, add a + between them.
 
-This command lists the number of publications for every year using
-this keyword. The script just searches for articles and excludes
+`python extract_occurrences.py`
+
+The script just searches for articles and excludes
 patents and citations.
-
 
 ### Alternative: Usage with Docker
 
@@ -26,25 +26,24 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 
 ## Example
 
-- Search term: 'bitcoin'
-- Desired time span: 2000 to 2015
-- Command: `python extract_occurrences.py 'bitcoin' 2000 2015`
+- Search terms: 'sarcopenia + {drugs for cancer treatment}'
+- Command: `python extract_occurrences.py`
 - Output: `out.csv`, with the following contents:
 
-| year | results |
+| search_term | results |
 |------|---------
 | ...  |    ...  |	|
-| 2011 |    141  |
-| 2012 |    292  |
-| 2013 |    889  |
-| 2014 |    2370 |
-| 2015 |    2580 |
+| sarcopenia+PEMBROlizumab |    1340  |
+| sarcopenia+OSIMERTINIB   |    179   |
+| sarcopenia+NIVOlumab     |    1490  |
+| sarcopenia+ABEMACICLIB   |    77    |
+| sarcopenia+PERTuzumab    |    208   |
 
-
-![bitcoin chart](https://raw.githubusercontent.com/Pold87/academic-keyword-occurrence/master/bitcoin_chart.png "bitcoin chart")
+![sarcopenia and drugs chart](https://github.com/BreisOne/academic-keyword-occurrence/blob/master/bar_plot_results.pdf "sarcopenia and drugs chart")
 
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
+adapted by Brais Bea - b.mascat@gmail.com
 
 If you use this code in academic papers, please cite this repository via Zenodo (http://doi.org/10.5281/zenodo.1218409):
 
