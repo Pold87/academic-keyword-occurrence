@@ -17,6 +17,8 @@ Add the list of keywords you want to search for and run the script. If you want 
 The script just searches for articles and excludes
 patents and citations.
 
+**visualization.ipynb**: This notebook helps to visualise the scraping results by generating a bar chart.
+
 ### Alternative: Usage with Docker
 
 You can use [Docker](https://www.docker.com/) to run this script, without the need of having Python or its dependencies installed.
@@ -39,7 +41,7 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 | sarcopenia+ABEMACICLIB   |    77    |
 | sarcopenia+PERTuzumab    |    208   |
 
-![sarcopenia and drugs chart](https://github.com/BreisOne/academic-keyword-occurrence/blob/master/bar_plot_results.pdf "sarcopenia and drugs chart")
+![sarcopenia and drugs chart](https://github.com/BreisOne/academic-keyword-occurrence/blob/master/output.png "sarcopenia and drugs chart")
 
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
