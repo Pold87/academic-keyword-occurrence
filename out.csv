@@ -1,12 +1,65 @@
-year,results
-2005,73
-2006,113
-2007,141
-2008,171
-2009,314
-2010,296
-2011,413
-2012,623
-2013,1350
-2014,3100
-2015,3960
+search_term,results
+sarcopenia+PEMBROlizumab,1340
+sarcopenia+OSIMERTINIB,179
+sarcopenia+NIVOlumab,1490
+sarcopenia+ABEMACICLIB,77
+sarcopenia+EMTANSINA TRASTUZUMAB,89
+sarcopenia+PERTuzumab,208
+sarcopenia+PANItumumab,237
+sarcopenia+ALECTINIB,67
+sarcopenia+DABRAFENIB,164
+sarcopenia+NIRAPARIB,67
+sarcopenia+TRASTuzumab,1270
+sarcopenia+CABOZANTINIB,287
+sarcopenia+DERUXTECAN TRASTUZUMAB,54
+sarcopenia+RAMUCIRUMAB,255
+sarcopenia+ATEZOlizumab,673
+sarcopenia+BEVACIZUMAB,1670
+sarcopenia+OLAPARIB,235
+sarcopenia+TRAMETINIB,189
+sarcopenia+RIBOCICLIB,83
+sarcopenia+DURVALUMAB,345
+sarcopenia+LENVATINIB,447
+sarcopenia+PALBOCICLIB,176
+sarcopenia+TRIFLURIDINA TIPIRACILO,0
+sarcopenia+IPILIMUMAB,857
+sarcopenia+PAZOPANIB,328
+sarcopenia+CRIZOTINIB,210
+sarcopenia+TRABECTEDINA,107
+sarcopenia+AVELumab,267
+sarcopenia+LORLATINIB,28
+sarcopenia+ENZALUTAMIDA,466
+sarcopenia+AFATINIB,244
+sarcopenia+CAPECITABINA,2330
+sarcopenia+CETUXIMAB,807
+sarcopenia+PACLitaxel ALBUMINA,1100
+sarcopenia+AFLIBERCEPT,109
+sarcopenia+SACITUZUMAB GOVITECAN,34
+sarcopenia+eriBULina,98
+sarcopenia+PACLITAXEL,3050
+sarcopenia+CLORURO DE SODIO,442
+sarcopenia+ENCORAFENIB,45
+sarcopenia+EVEROLIMUS,1080
+sarcopenia+VINORELBINA,370
+sarcopenia+PEMETREXED,533
+sarcopenia+BINIMETINIB,50
+sarcopenia+CARBOPLATINO,1710
+sarcopenia+ABIRATERONA,508
+sarcopenia+DENOSUMAB,3030
+sarcopenia+EVEROLIMUS,1080
+sarcopenia+FILGRASTIM,111
+sarcopenia+FLUOROURACILO,3360
+sarcopenia+DOXORUBICINA,4600
+sarcopenia+GEMCITABINA,2180
+sarcopenia+REGORAFENIB,383
+sarcopenia+SELPERCATINIB,15
+sarcopenia+REMDESIVIR,385
+sarcopenia+ENOXAPARINA,107
+sarcopenia+IRINOTECAN,1250
+sarcopenia+NINTEDANIB,224
+sarcopenia+PLERIXAFOR,39
+sarcopenia+ALPELISIB,50
+sarcopenia+RUCAPARIB,58
+sarcopenia+TEMOZOLOMIDA,482
+sarcopenia+OXALIPLATINO,2060
+sarcopenia+SOTORASIB,25
