@@ -10,7 +10,7 @@ There is a Python 3 branch (master) and a Python 2 branch (python2).
 
 ## Usage
 
-Add the list of keywords you want to search for and run the script. If you want to search for combinations of words, add a + between them.
+Add the list of keywords you want to search for in `input.csv` and run the script. If you want to search for combinations of words, add a + between them.
 
 `python extract_occurrences.py`
 
@@ -41,7 +41,7 @@ You can use [Docker](https://www.docker.com/) to run this script, without the ne
 | sarcopenia+ABEMACICLIB   |    77    |
 | sarcopenia+PERTuzumab    |    208   |
 
-![sarcopenia and drugs chart](https://github.com/BreisOne/academic-keyword-occurrence/blob/master/output.png "sarcopenia and drugs chart")
+![sarcopenia and drugs chart](https://github.com/BreisOne/academic-keyword-occurrence/blob/master/bar_plot_results.jpg "sarcopenia and drugs chart")
 
 ## Credits
 Created by Volker Strobel - volker.strobel87@gmail.com
